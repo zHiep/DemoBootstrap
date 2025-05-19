@@ -1,0 +1,295 @@
+    :root{
+        --vio-primary:#19a1ff;
+        --vio-green:#28bf45
+    }
+
+    body{
+        font-family:"Be Vietnam Pro",sans-serif
+    }
+
+    a{
+        text-decoration:none
+    }
+
+    .topbar{
+        font-size:.85rem
+    }
+
+    .navbar-brand img{
+        height:42px
+    }
+    .navbar-nav .nav-link{
+        padding:0 1rem;
+        font-weight:500
+    }
+
+    .navbar-nav .nav-link:hover{
+        color:var(--vio-primary)!important
+    }
+
+    .btn-primary{
+        --bs-btn-bg:var(--vio-primary);
+        --bs-btn-border-color:var(--vio-primary)
+    }
+
+    .btn-success{
+        --bs-btn-bg:var(--vio-green);
+        --bs-btn-border-color:var(--vio-green)
+    }
+
+    .hero {
+        position:relative;
+        min-height:680px;
+        background:#e6f6ff url("clouds-bg.svg") no-repeat left top/cover;
+        display:flex;
+        align-items:center;
+        overflow:hidden
+    }
+
+    .hero::after{
+        content:"";
+        position:absolute;
+        inset:0;
+        background:url("https://s3.vio.edu.vn/assets/img/20_02_banner_2025.jpg") no-repeat right bottom/contain;
+        pointer-events:none;
+        z-index:-1;
+        width:65%;
+        margin-left:auto
+    }
+    
+    .hero-hill{
+        position:absolute;
+        bottom:-60px;
+        right:-4vw;
+        width:110vw;
+        pointer-events:none
+    }
+
+    .hero h1{
+        font-weight:800;
+        line-height:1.2
+    }
+
+    .hero .content{
+        max-width:560px
+    }
+
+    @media(max-width:991.98px){
+        .hero{
+            padding:3rem 0
+        }
+
+        .hero::after{
+            width:100%;
+            background-position:center bottom;
+            opacity:.8
+        }
+
+        .hero-hill{
+            display:none
+        }
+
+        .hero .content{
+            text-align:center;
+            margin:auto
+        }
+    }
+
+    .section-title{
+        font-weight:700;
+        margin-bottom:2rem;
+        text-align:center
+    }
+
+    .feature-item img{
+        height:120px;
+        width:auto
+    }
+
+    .rank-card{
+        border-radius:12px;
+        box-shadow:0 4px 10px rgba(0,0,0,.05)
+    }
+
+    footer a{
+        color:#6c757d
+    }
+
+    footer a:hover{
+        color:var(--vio-primary)
+    }
+
+    .ranking {
+        background: linear-gradient(to top, #ffffff, #72caff);
+        min-height: 100vh;
+        padding: 2rem;
+    }
+
+    .trophy-img {
+        width: 80px;
+        height: auto;
+    }
+
+    .top-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+        text-align: center;
+        width: 200px;
+    }
+
+    .rank-number {
+        height: 40px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .rank-number-1 {
+        height: 70px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .list-group-item {
+        padding: 0.75rem 1rem;
+    }
+
+    .badge {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .step-container {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .step-title {
+        font-weight: bold;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .step-subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .step {
+        border-radius: 30px 30px 0 0;
+        padding: 30px 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .step-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 15px;
+        border-radius: 50%;
+        color: #fff;
+        font-weight: bold;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .step-1 {
+        height: 250px;
+        background: linear-gradient(to bottom, #00bfff, #e6f6ff);
+    }
+
+    .step-2 {
+        height: 330px;
+        background: linear-gradient(to bottom, #fcb045, #fff2e6);
+    }
+
+    .step-3 {
+        height: 410px;
+        background: linear-gradient(to bottom, #3cb371, #eaffea);
+    }
+
+    .icon-1 { background-color: #00bfff; }
+    .icon-2 { background-color: #fcb045; }
+    .icon-3 { background-color: #3cb371; }
+
+    .step h5 {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .step-content {
+        font-size: 14px;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .row.align-end {
+        align-items: flex-end;
+    }
+
+    .nav-pills .nav-link {
+        border-radius: 30px;
+        padding: 10px 20px;
+        margin: 0 5px;
+        font-weight: 500;
+        background-color: #f5f5f5;
+        color: #000;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #63d7a3;
+        color: #fff;
+    }
+
+    #why-FPT-Elearning h5 {
+        font-weight: bold;
+    }
+
+    #why-FPT-Elearning p {
+        font-size: 15px;
+        color: #333;
+    }
+    #roleTabs .nav-link {
+        border-radius: 25px;
+        padding: 6px 16px;
+        margin: 5px;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: #f5f5f5;
+        color: #000;
+        white-space: nowrap;
+    }
+
+    #roleTabs .nav-link.active {
+        background-color: #63d7a3;
+        color: #fff;
+    }
+
+    @media (max-width: 576px) {
+        #roleTabs {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .top-card {
+            width: 100%;
+        }
+        .top1 {
+            transform: scale(1) !important;
+        }
+    }
