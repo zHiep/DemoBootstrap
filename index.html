@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FPT-Elearning – Học tập trực tuyến cùng AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="assets/bootstrap-5.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar bg-white border-bottom py-1">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="d-none d-lg-flex gap-3 small">
+        <span><i class="bi bi-envelope me-1"></i>support@fpt.edu.vn</span>
+        <a href="#"><i class="bi bi-facebook me-1"></i>Facebook FPT-Elearning</a>
+        <span><i class="bi bi-telephone me-1"></i>1900 636 111</span>
+        <span><i class="bi bi-telephone me-1"></i>0353 055 060</span>
+      </div>
+      <div class="d-flex gap-2 ms-auto">
+        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4">Đăng nhập</a>
+        <a href="#" class="btn btn-primary btn-sm rounded-pill px-4">Đăng ký</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand d-lg-block d-flex align-items-center" href="#">
+      <img src="data:image/png;base64,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" alt="FPT-Elearning" style="height: 40px;">
+    </a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible nav links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto text-center">
+        <li class="nav-item"><a class="nav-link py-2" href="#">Vào học</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">Đổi quà</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">Đánh giá</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">Thách đấu</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">Mua khóa học</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">FptTutor</a></li>
+        <li class="nav-item"><a class="nav-link py-2" href="#">Tin tức</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Banner -->
+  <section class="hero position-relative">
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="background-image: url('https://s3.vio.edu.vn/assets/img/20_02_banner_2025.jpg'); background-size: cover; background-position: center; z-index: 1;"></div>
+
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="content py-5 text-center">
+      <h1 class="display-5 mb-3">Tự học trực tuyến với<br>trí tuệ nhân tạo AI</h1>
+      <p class="lead mb-4">Hơn 10 triệu học sinh yêu thích và tiến bộ vượt trội</p>
+      <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+        <a href="#" class="btn btn-success btn-lg px-5">Học thử ngay</a>
+        <a href="#" class="btn btn-link text-black p-0 d-inline-flex align-items-center gap-2">
+          <i class="bi bi-play-circle-fill fs-3"></i>Giới thiệu về FPT-Elearning
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Stats -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Trợ lý học tập thông minh FPT-Elearning</h2>
+      <div class="row text-center gy-4">
+        <div class="col-6 col-lg-3"><i class="bi bi-emoji-smile fs-1 text-primary"></i><h5 class="mt-2 mb-1">Hơn 92%</h5><p class="mb-0 small">Học sinh tiến bộ rõ rệt</p></div>
+        <div class="col-6 col-lg-3"><i class="bi bi-graph-up-arrow fs-1 text-primary"></i><h5 class="mt-2 mb-1">95% chính xác</h5><p class="mb-0 small">Gợi ý lộ trình cá nhân hoá</p></div>
+        <div class="col-6 col-lg-3"><i class="bi bi-journals fs-1 text-primary"></i><h5 class="mt-2 mb-1">1,000,000+</h5><p class="mb-0 small">Nội dung kiến thức</p></div>
+        <div class="col-6 col-lg-3"><i class="bi bi-film fs-1 text-primary"></i><h5 class="mt-2 mb-1">10,000+</h5><p class="mb-0 small">Video bài giảng sinh động</p></div>
+      </div>
+    </div>
+  </section>
+
+<!-- Lộ trình học tập cá nhân hóa -->
+<section id="personal-learning-path" class="py-5">
+  <div class="container step-container">
+    <h2 class="step-title">Lộ trình học tập cá nhân hóa</h2>
+    <p class="step-subtitle">
+      AI của FPT-Elearning phát hiện chính xác đến 95% điểm mạnh,<br>
+      điểm yếu của học sinh trong từng bài luyện tập, trận đấu.
+    </p>
+
+    <div class="row text-center align-end">
+      <!-- Bước 1 -->
+      <div class="col-md-4 mb-4 d-flex justify-content-center">
+        <div class="step step-1 shadow-sm w-75">
+          <div class="step-icon icon-1">1</div>
+          <h5>Đánh giá đầu vào miễn phí</h5>
+          <div class="step-content">Đánh giá năng lực</div>
+        </div>
+      </div>
+
+      <!-- Bước 2 -->
+      <div class="col-md-4 mb-4 d-flex justify-content-center">
+        <div class="step step-2 shadow-sm w-75">
+          <div class="step-icon icon-2">2</div>
+          <h5>Học tập chủ động</h5>
+          <div class="step-content">Xem video lý thuyết</div>
+          <div class="step-content">Luyện tập</div>
+          <div class="step-content">Làm bài kiểm tra học kỳ</div>
+        </div>
+      </div>
+
+      <!-- Bước 3 -->
+      <div class="col-md-4 mb-4 d-flex justify-content-center">
+        <div class="step step-3 shadow-sm w-75">
+          <div class="step-icon icon-3">3</div>
+          <h5>Tương tác, chinh phục</h5>
+          <div class="step-content">Thách đấu, đấu trường</div>
+          <div class="step-content">Đổi quà</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- RANKING -->
+ <section class="py-5 ranking">
+  <h2 class="text-center mb-4 step-title">Vinh danh Đấu trường khu vực FPT-Elearning<br>2024 - 2025</h2>
+
+  <!-- Bộ lọc -->
+  <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+    <select class="form-select w-auto"><option>Hà Nội</option></select>
+    <select class="form-select w-auto"><option>Chọn quận huyện</option></select>
+    <select class="form-select w-auto"><option>Khối 1</option></select>
+    <select class="form-select w-auto"><option>Tổng hợp</option></select>
+    <select class="form-select w-auto"><option>Vòng sơ loại</option></select>
+  </div>
+
+  <!-- Nút Top -->
+  <div class="text-center mb-4">
+    <button class="btn btn-success">Top 10 - Khối 1</button>
+  </div>
+
+  <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mb-5 align-items-end">
+
+  <!-- Top 2 -->
+  <div class="top-card text-center order-2 order-sm-1">
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583340.png" alt="Hạng 2" class="trophy-img mb-2" style="width: 70px;">
+    <div class="rank-number text-success">Hạng 2</div>
+    <div><strong>Lâm Ngọc Quỳnh Chi</strong></div>
+    <div class="text-muted small">Trường Tiểu học Phú Đông</div>
+  </div>
+
+  <!-- Top 1 -->
+  <div class="top1 top-card text-center border border-3 border-warning p-3 order-1 order-sm-2 bg-light shadow" style="transform: scale(1.1);">
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" alt="Hạng 1" class="trophy-img mb-2" style="width: 70px;">
+    <div class="rank-number-1 text-warning fw-bold fs-5">🏆 Hạng 1</div>
+    <div><strong>Nguyễn Khánh Chi Lan</strong></div>
+    <div class="text-muted small">Trường Tiểu học A Thị trấn Mỹ Luông</div>
+  </div>
+
+  <!-- Top 3 -->
+  <div class="top-card text-center order-3 order-sm-3">
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583363.png" alt="Hạng 3" class="trophy-img mb-2" style="width: 70px;">
+    <div class="rank-number text-muted">Hạng 3</div>
+    <div><strong>Trần Trung Kiên</strong></div>
+    <div class="text-muted small">Trường Tiểu học C Vĩnh Xương</div>
+  </div>
+
+</div>
+
+
+  <!-- Top 4 - 10 -->
+  <div class="container">
+    <ul class="list-group mx-auto" style="max-width: 700px;">
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">04</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583340.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Phạm Hoàng Mỹ</div>
+      <small class="text-muted">Trường Tiểu học A Thị trấn Mỹ Luông</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">05</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Nguyễn Lê Đan Thư</div>
+      <small class="text-muted">Trường Tiểu học A An Hảo</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">06</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/921/921071.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Phan Anh Dũng</div>
+      <small class="text-muted">Trường Tiểu học Trần Quang Khải</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">07</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583434.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Lê Huỳnh Anh Thư</div>
+      <small class="text-muted">Trường Tiểu học Nguyễn Khuyến</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">08</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/2583/2583434.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Lê Thiên Tường</div>
+      <small class="text-muted">Trường Tiểu học B Mỹ An</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">09</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140047.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Nguyễn Ngọc Khuê</div>
+      <small class="text-muted">Trường Tiểu học A Bình Hoà</small>
+    </div>
+  </li>
+  <li class="list-group-item d-flex align-items-center gap-3">
+    <span class="rank-number fs-5 fw-bold text-black">10</span>
+    <img src="https://cdn-icons-png.flaticon.com/512/4140/4140051.png" alt="avatar" width="40" height="40" class="rounded-circle border">
+    <div>
+      <div class="fw-semibold">Tân Nguyễn Minh Vy</div>
+      <small class="text-muted">Trường Tiểu học Châu Văn Liêm</small>
+    </div>
+  </li>
+</ul>
+
+  </div>
+ </section>
+
+  <!-- News -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Tin tức & Sự kiện</h2>
+      <div class="row g-4">
+        <div class="col-md-4"><div class="card h-100"><img src="https://vt-cdn.vio.edu.vn/assets/img/mathPic.png" class="card-img-top" alt="news"><div class="card-body"><h6 class="card-title">FPT-Elearning đồng hành kỳ thi Toán quốc tế</h6><p class="card-text small">Ngày 10/3/2025, cuộc thi Toán quốc tế đã chính thức khai mạc...</p></div></div></div>
+        <div class="col-md-4"><div class="card h-100"><img src="https://vt-cdn.vio.edu.vn/assets/img/tvPic.png" class="card-img-top" alt="news"><div class="card-body"><h6 class="card-title">Ra mắt tính năng luyện nói tiếng Anh với AI</h6><p class="card-text small">Tính năng mới giúp học sinh luyện phát âm chuẩn bản xứ...</p></div></div></div>
+        <div class="col-md-4"><div class="card h-100"><img src="https://vt-cdn.vio.edu.vn/assets/img/matheng.png" class="card-img-top" alt="news"><div class="card-body"><h6 class="card-title">Workshop "Cha mẹ đồng hành học tập số"</h6><p class="card-text small">Hơn 500 phụ huynh đã tham gia buổi workshop trực tuyến...</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TABS -->
+  <section class="py-5" id="why-FPT-Elearning">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Tại sao nên lựa chọn FPT-Elearning</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-5" id="roleTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="ph-tab" data-bs-toggle="pill" data-bs-target="#ph" type="button" role="tab">Phụ huynh</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="hs-tab" data-bs-toggle="pill" data-bs-target="#hs" type="button" role="tab">Học sinh</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="gv-tab" data-bs-toggle="pill" data-bs-target="#gv" type="button" role="tab">Giáo viên</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="nt-tab" data-bs-toggle="pill" data-bs-target="#nt" type="button" role="tab">Nhà trường</button>
+      </li>
+    </ul>
+
+    <!-- Tab nội dung -->
+    <div class="tab-content" id="roleTabsContent">
+      <!-- Phụ huynh -->
+      <div class="tab-pane fade show active" id="ph" role="tabpanel">
+        <div class="row align-items-center text-start">
+          <div class="col-md-8">
+            <div class="mb-4">
+              <h5>📊 Báo cáo trực quan</h5>
+              <p>Nhận báo cáo chi tiết hằng ngày về điểm mạnh, điểm yếu và kết quả học tập của con.</p>
+            </div>
+            <div class="mb-4">
+              <h5>⏱ Tiết kiệm thời gian</h5>
+              <p>Tiết kiệm thời gian khi con tự giác, chủ động và tiến bộ trong học tập.</p>
+            </div>
+            <div class="mb-4">
+              <h5>📞 Hỗ trợ kèm con học</h5>
+              <p>Sử dụng học liệu, lộ trình gợi ý và các phân tích của FPT-Elearning để hỗ trợ con tự học hoặc có kế hoạch bồi dưỡng phù hợp.</p>
+            </div>
+            <div>
+              <h5>💰 Tiết kiệm tài chính</h5>
+              <p>Tiết kiệm chi phí, giảm áp lực học thêm khi con tự học hiệu quả.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://vt-cdn.vio.edu.vn/assets/img/phuhuynh.png" alt="Phụ huynh" class="img-fluid" style="max-height: 350px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Học sinh -->
+      <div class="tab-pane fade" id="hs" role="tabpanel">
+        <div class="row align-items-center text-start">
+          <div class="col-md-8">
+            <div class="mb-4">
+              <h5>📊 Linh hoạt, chủ động</h5>
+              <p>Học mọi lúc, mọi nơi trên các thiết bị điện tử có kết nối Internet.</p>
+            </div>
+            <div class="mb-4">
+              <h5>⏱ Cạnh tranh, thu hút</h5>
+              <p>Quà tặng hấp dẫn và nhiều cuộc thi khuyến khích, cổ vũ tinh thần ham học.</p>
+            </div>
+            <div class="mb-4">
+              <h5>📞 Lộ trình học cá nhân hóa</h5>
+              <p>Phát hiện điểm mạnh, điểm yếu, đề xuất kiến thức và kỹ năng phù hợp với năng lực học sinh. Rút ngắn thời gian học tập từ 30% - 50%..</p>
+            </div>
+            <div>
+              <h5>💰 Tăng hứng thú học</h5>
+              <p>Video bài giảng hoạt hình cùng hệ thống câu hỏi luyện tập phong phú và giàu tính tương tác giúp học sinh vững kiến thức, hào hứng học tập.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://vt-cdn.vio.edu.vn/assets/img/studentPic_new.png" alt="Học sinh" class="img-fluid" style="max-height: 350px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Giáo viên -->
+      <div class="tab-pane fade" id="gv" role="tabpanel">
+        <div class="row align-items-center text-start">
+          <div class="col-md-8">
+            <div class="mb-4">
+              <h5>📊 Tiết kiệm thời gian</h5>
+              <p>Tiết kiệm 95% thời gian soạn giáo án, giao bài tập, tổ chức kiểm tra, chấm điểm.</p>
+            </div>
+            <div class="mb-4">
+              <h5>⏱ Hỗ trợ quản lý</h5>
+              <p>Báo cáo thống kê nhanh, chính xác hiệu quả học tập của từng học sinh.</p>
+            </div>
+            <div class="mb-4">
+              <h5>📞 Dạy học hiệu quả</h5>
+              <p>Sử dụng nguồn học liệu của FPT-Elearning để đa dạng hóa cách truyền tải kiến thức.
+Ứng dụng tính năng MS Team vào dạy học trực tuyến</p>
+            </div>
+            <div>
+              <h5>💰 Giảm áp lực</h5>
+              <p>Hỗ trợ phân hóa học sinh, từ đó thiết kế lộ trình bồi dưỡng riêng biệt, sát sao, hiệu quả cho học sinh.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://vt-cdn.vio.edu.vn/assets/img/teacher.png" alt="Học sinh" class="img-fluid" style="max-height: 350px;">
+          </div>
+        </div>
+      </div>
+
+      <!-- Nhà trường -->
+      <div class="tab-pane fade" id="nt" role="tabpanel">
+        <div class="row align-items-center text-start">
+          <div class="col-md-8">
+            <div class="mb-4">
+              <h5>📊 Nâng cao chất lượng dạy và học
+</h5>
+              <p>Quản lý toàn diện hoạt động dạy và học của giáo viên, học sinh theo từng khối lớp.</p>
+            </div>
+            <div class="mb-4">
+              <h5>⏱ Quản lý toàn diện
+</h5>
+              <p>Sử dụng nguồn học liệu, hạ tầng công nghệ và các báo cáo của FPT-Elearning nhằm chủ động, phát huy và nâng cao chất lượng đào tạo.</p>
+            </div>
+            <div class="mb-4">
+              <h5>📞 Đánh giá chính xác</h5>
+              <p>Báo cáo, thống kê, đánh giá hoạt động giảng dạy của giáo viên. Nắm bắt điểm mạnh, điểm yếu của học sinh từng khối lớp.</p>
+            </div>
+            <div>
+              <h5>💰 Tối ưu thời gian</h5>
+              <p>Giảm thời gian thống kê, báo cáo, phân tích.
+Giảm thời gian tổ chức kiểm tra, đánh giá.
+Thuận tiện kết nối trực tiếp, kịp thời với phụ huynh.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="https://vt-cdn.vio.edu.vn/assets/img/school.png" alt="Học sinh" class="img-fluid" style="max-height: 350px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="bg-light text-black pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <img src="data:image/png;base64,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" alt="FPT-Elearning" height="48" class="mb-3">
+          <p class="small">Nền tảng học tập trực tuyến ứng dụng Trí tuệ nhân tạo (AI) hỗ trợ cá nhân hoá lộ trình, luyện tập và đánh giá năng lực học sinh.</p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6>FPT-Elearning</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Tính năng</a></li>
+            <li><a href="#">Bảng giá</a></li>
+            <li><a href="#">Tin tức</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-2">
+          <h6>Hỗ trợ</h6>
+          <ul class="list-unstyled small">
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <li><a href="#">Hướng dẫn sử dụng</a></li>
+            <li><a href="#">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 ms-auto">
+          <h6>Tải ứng dụng</h6>
+          <a href="#"><img src="https://elearning.tanlonggroup.com/Content/Content_new/images/login/appstore.png" alt="AppStore" class="mb-2" height="40"></a><br>
+          <a href="#"><img src="https://elearning.tanlonggroup.com/Content/Content_new/images/login/googleplay.png" alt="PlayStore" height="40"></a>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <p class="small text-center mb-0">© 2025 FPT - Elearning.</p>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap-5.3.6-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
